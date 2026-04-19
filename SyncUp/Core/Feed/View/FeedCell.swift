@@ -7,17 +7,20 @@
 
 import SwiftUI
 
+import AVKit
+
 struct FeedCell: View {
-    let post: Int
+    let post: post
+    var player: AVPlayer
+    
+    init(post: post, player: AVPlayer) {
+        self.post = post
+        self.player = player
+    }
     var body: some View {
         ZStack {
-            Rectangle()
-                    .fill(.purple )
+            CustomVideoPlayer(player: player)
                     .containerRelativeFrame([.horizontal, .vertical])
-                    .overlay {
-                        Text("post \(post)")
-                            .foregroundStyle(.white)
-                    }
                 
             VStack {
                 Spacer()
@@ -93,9 +96,21 @@ struct FeedCell: View {
             }
             . padding()
         }
+        .onTapGesture {
+            switch player.timeControlStatus {
+            case .paused:
+                player.play()
+            case .waitingToPlayAtSpecifiedRate:
+                break
+            case .playing:
+                player.pause()
+            @unknown default:
+                break
+            }
+        }
     }
 }
 
 #Preview {
-    FeedCell(post: 2)
+    FeedCell(post: post(id: NSUUID().uuidString, videoUrl: ""), player: AVPlayer())
 }
