@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CEA298712F9CCDBA00E815AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA298702F9CCDBA00E815AE /* GoogleService-Info.plist */; };
-		CEAF769B2F9CDCEE00F1E9E7 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = CEAF769A2F9CDCEE00F1E9E7 /* FirebaseAI */; };
-		CEAF769D2F9CDCEE00F1E9E7 /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = CEAF769C2F9CDCEE00F1E9E7 /* FirebaseAILogic */; };
 		CEAF769F2F9CDCEE00F1E9E7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CEAF769E2F9CDCEE00F1E9E7 /* FirebaseAnalytics */; };
 		CEAF76A12F9CDCEE00F1E9E7 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = CEAF76A02F9CDCEE00F1E9E7 /* FirebaseAnalyticsCore */; };
 		CEAF76A32F9CDCEE00F1E9E7 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = CEAF76A22F9CDCEE00F1E9E7 /* FirebaseAnalyticsIdentitySupport */; };
@@ -56,10 +54,8 @@
 				CEAF76B32F9CDCEE00F1E9E7 /* FirebaseFirestore in Frameworks */,
 				CEAF76AB2F9CDCEE00F1E9E7 /* FirebaseAuthCombine-Community in Frameworks */,
 				CEAF76BD2F9CDCEE00F1E9E7 /* FirebaseInstallations in Frameworks */,
-				CEAF769D2F9CDCEE00F1E9E7 /* FirebaseAILogic in Frameworks */,
 				CEAF76A32F9CDCEE00F1E9E7 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
 				CEAF76BB2F9CDCEE00F1E9E7 /* FirebaseInAppMessaging-Beta in Frameworks */,
-				CEAF769B2F9CDCEE00F1E9E7 /* FirebaseAI in Frameworks */,
 				CEAF76AF2F9CDCEE00F1E9E7 /* FirebaseCrashlytics in Frameworks */,
 				CEAF76B92F9CDCEE00F1E9E7 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				CEAF76C92F9CDCEE00F1E9E7 /* FirebaseStorageCombine-Community in Frameworks */,
@@ -119,8 +115,6 @@
 			);
 			name = SyncUp;
 			packageProductDependencies = (
-				CEAF769A2F9CDCEE00F1E9E7 /* FirebaseAI */,
-				CEAF769C2F9CDCEE00F1E9E7 /* FirebaseAILogic */,
 				CEAF769E2F9CDCEE00F1E9E7 /* FirebaseAnalytics */,
 				CEAF76A02F9CDCEE00F1E9E7 /* FirebaseAnalyticsCore */,
 				CEAF76A22F9CDCEE00F1E9E7 /* FirebaseAnalyticsIdentitySupport */,
@@ -423,16 +417,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CEAF769A2F9CDCEE00F1E9E7 /* FirebaseAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEAF76992F9CDCEE00F1E9E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAI;
-		};
-		CEAF769C2F9CDCEE00F1E9E7 /* FirebaseAILogic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEAF76992F9CDCEE00F1E9E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAILogic;
-		};
 		CEAF769E2F9CDCEE00F1E9E7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEAF76992F9CDCEE00F1E9E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
