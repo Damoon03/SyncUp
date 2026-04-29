@@ -11,7 +11,19 @@ internal import Combine
 
 class ContentViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
-    init() {
+    
+    private let authService: AuthService
+    private var cancelables = Set<AnyCancellable>()
+    
+    init(authservice: AuthService) {
+        self.authService = authservice
         
+        setupSubscibers()
+        authservice.updateUserSession()
+    }
+    private func setupSubscibers() {
+        authService.$userSession.sink { [weak self] user in
+            self?.userSession = user
+        }.store(in: &cancelables)
     }
 }
