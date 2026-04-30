@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = ContentViewModel
+    @StateObject var viewModel: ContentViewModel
     private let authService: AuthService
     
     init(authService: AuthService) {
@@ -22,7 +22,7 @@ struct ContentView: View {
             if viewModel.userSession != nil {
                 MainTabView(authService: authService)
             } else {
-                LoginView()
+                LoginView(authService: authService)
             }
         }
     }

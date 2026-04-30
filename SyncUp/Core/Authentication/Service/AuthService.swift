@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 internal import Combine
 
+@MainActor
 class AuthService {
     
     @Published var userSession: FirebaseAuth.User?
